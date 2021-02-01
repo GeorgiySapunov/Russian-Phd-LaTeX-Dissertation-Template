@@ -35,38 +35,11 @@
 апробация на частных примерах: \dots  и~\dots.
 
 
-\underline{\textbf{Первая глава}} посвящена \dots
-
-картинку можно добавить так:
-\begin{figure}[ht]
-    \centerfloat{
-        \hfill
-        \subcaptionbox{\LaTeX}{%
-            \includegraphics[scale=0.27]{latex}}
-        \hfill
-        \subcaptionbox{Knuth}{%
-            \includegraphics[width=0.25\linewidth]{knuth1}}
-        \hfill
-    }
-    \caption{Подпись к картинке.}\label{fig:latex}
-\end{figure}
-
-Формулы в строку без номера добавляются так:
-\[
-  \lambda_{T_s} = K_x\frac{d{x}}{d{T_s}}, \qquad
-  \lambda_{q_s} = K_x\frac{d{x}}{d{q_s}},
-\]
+\underline{\textbf{Первая глава}} посвящена 
 
 \underline{\textbf{Вторая глава}} посвящена исследованию
 
 \underline{\textbf{Третья глава}} посвящена исследованию
-
-Можно сослаться на свои работы в автореферате. Для этого в файле
-\verb!Synopsis/setup.tex! необходимо присвоить положительное значение
-счётчику \verb!\setcounter{usefootcite}{1}!. В таком случае ссылки на
-работы других авторов будут подстрочными.
-Изложенные в третьей главе результаты опубликованы в~\cite{vakbib1, vakbib2}.
-Использование подстрочных ссылок внутри таблиц может вызывать проблемы.
 
 В \underline{\textbf{четвертой главе}} приведено описание
 
@@ -76,9 +49,6 @@
 \input{common/concl}
 
 \pdfbookmark{Литература}{bibliography}                                % Закладка pdf
-При использовании пакета \verb!biblatex! список публикаций автора по теме
-диссертации формируется в разделе <<\publications>>\ файла
-\verb!common/characteristic.tex!  при помощи команды \verb!\nocite!
 
 \ifdefmacro{\microtypesetup}{\microtypesetup{protrusion=false}}{} % не рекомендуется применять пакет микротипографики к автоматически генерируемому списку литературы
 \urlstyle{rm}                               % ссылки URL обычным шрифтом
@@ -94,28 +64,52 @@
   %  * Если цитировать каждый источник отдельной командой --- найти некоторые ошибки будет проще.
   %
   %% authorvak
-  \nocite{vakbib1}%
-  \nocite{vakbib2}%
+\nocite{koval2020b}%
+\nocite{Bolshakov2018}%
+\nocite{Bolshakov2019}%
+\nocite{Bolshakov2017}%
+\nocite{Koval2020}%
+  \nocite{Sapunov2018}%
+  \nocite{Sharov2019}%
+  \nocite{Shugurov2019}%
+\nocite{Mozharov2018}%
+  \nocite{Shugurov2018}%
+  \nocite{Fedorov2020}%
+  \nocite{Bolshakov2018a}%
+\nocite{Bolshakov2018b}%
+  \nocite{Fedorov2017}%
+\nocite{Bolshakov2019a}%
+  \nocite{Sapunov2018a}%
+\nocite{Mozharov2018a}%
+  \nocite{Sapunov2019}%
+  \nocite{Koval2019}%
+  \nocite{Bolshakov2016}%
+    \nocite{Koval2020a}%
+\nocite{Fedorov2018}%
+\nocite{Fedorov2018a}%
+\nocite{Shugurov2020}%
+\nocite{Sapunov2020}%
+  \nocite{Shugurov2018a}%
+  \nocite{Mozharov2017}%
   %
   %% authorwos
-  \nocite{wosbib1}%
+%  \nocite{wosbib1}%
   %
   %% authorscopus
-  \nocite{scbib1}%
+ 
   %
   %% authorpathent
-  \nocite{patbib1}%
+%  \nocite{patbib1}%
   %
   %% authorprogram
-  \nocite{progbib1}%
+%  \nocite{progbib1}%
   %
   %% authorconf
-  \nocite{confbib1}%
-  \nocite{confbib2}%
+
   %
   %% authorother
-  \nocite{bib1}%
-  \nocite{bib2}%
+%  \nocite{bib1}%
+%  \nocite{bib2}%
 
   \ifnumgreater{\value{usefootcite}}{0}{
     \begin{refcontext}[labelprefix={}]
